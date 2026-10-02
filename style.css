@@ -38,3 +38,164 @@
 .repair-photo img{object-position:center 55%;filter:saturate(.74) brightness(.66) contrast(1.08)}
 .repair-copy h2{margin-top:10px}
 @media(max-width:950px){.hero-media img{object-position:center 50%}}
+
+/* iOS polish: avoid emoji-style service icons and arrows */
+.service-icon{font-family:var(--display)!important;font-variant-emoji:text!important;position:relative}
+.icon-device:before{content:"";display:block;width:22px;height:15px;border:1.5px solid var(--green);border-radius:2px}
+.icon-device:after{content:"";display:block;width:27px;height:2px;background:var(--green);margin-top:4px;border-radius:1px}
+.icon-system:before{content:"";display:block;width:22px;height:22px;border:1.5px solid var(--green);border-radius:50%}
+.icon-system:after{content:"";position:absolute;width:8px;height:8px;border:1.5px solid var(--green);border-radius:50%}
+.icon-security:before{content:"";display:block;width:18px;height:21px;border:1.5px solid var(--green);border-radius:10px 10px 5px 5px;transform:rotate(45deg) scale(.78)}
+.service-arrow{display:block!important;width:8px;height:8px;border-top:1.5px solid var(--green);border-right:1.5px solid var(--green);transform:rotate(45deg)}
+.text-arrow{display:inline-block;width:7px;height:7px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);margin-left:8px;margin-bottom:1px}
+
+/* Floating WhatsApp — Lumem */
+.floating-whatsapp{
+  position:fixed;
+  right:26px;
+  bottom:24px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:205px;
+  padding:12px 15px 12px 12px;
+  border:1px solid rgba(32,239,73,.7);
+  border-radius:5px;
+  background:rgba(3,8,5,.94);
+  box-shadow:0 10px 35px rgba(0,0,0,.45),0 0 0 1px rgba(32,239,73,.08),0 0 24px rgba(32,239,73,.08);
+  color:var(--white);
+  text-decoration:none;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  transition:transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.floating-whatsapp:hover{
+  transform:translateY(-3px);
+  border-color:var(--green);
+  background:rgba(5,13,8,.98);
+  box-shadow:0 14px 40px rgba(0,0,0,.52),0 0 25px rgba(32,239,73,.15);
+}
+.floating-whatsapp-icon{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--green);
+  color:#031006;
+}
+.floating-whatsapp-icon svg{
+  width:24px;
+  height:24px;
+  fill:currentColor;
+}
+.floating-whatsapp-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+}
+.floating-whatsapp-text small{
+  font-family:var(--display);
+  font-size:7px;
+  letter-spacing:.16em;
+  color:#7d8a80;
+  margin-bottom:5px;
+}
+.floating-whatsapp-text strong{
+  font-family:var(--display);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:#f2f5f1;
+}
+.floating-whatsapp-arrow{
+  margin-left:auto;
+  width:8px;
+  height:8px;
+  border-top:1.5px solid var(--green);
+  border-right:1.5px solid var(--green);
+  transform:rotate(45deg);
+}
+@media(max-width:600px){
+  .floating-whatsapp{
+    right:16px;
+    bottom:17px;
+    min-width:0;
+    width:56px;
+    height:56px;
+    padding:0;
+    border-radius:50%;
+    justify-content:center;
+    box-shadow:0 9px 28px rgba(0,0,0,.5),0 0 20px rgba(32,239,73,.1);
+  }
+  .floating-whatsapp-icon{
+    width:42px;
+    height:42px;
+    flex-basis:42px;
+  }
+  .floating-whatsapp-text,.floating-whatsapp-arrow{display:none}
+}
+
+/* LUMEM — refined floating WhatsApp CTA */
+.floating-whatsapp{
+  min-width:238px;
+  height:64px;
+  padding:7px 16px 7px 8px;
+  border:1px solid rgba(32,239,73,.48);
+  border-radius:34px;
+  background:linear-gradient(135deg,rgba(8,17,11,.97),rgba(3,8,5,.96));
+  box-shadow:0 14px 42px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.025),0 0 28px rgba(32,239,73,.07);
+}
+.floating-whatsapp:before{
+  content:"";
+  position:absolute;
+  inset:-5px;
+  border:1px solid rgba(32,239,73,.10);
+  border-radius:40px;
+  pointer-events:none;
+}
+.floating-whatsapp:hover{
+  transform:translateY(-4px);
+  border-color:rgba(32,239,73,.85);
+  box-shadow:0 18px 46px rgba(0,0,0,.56),0 0 34px rgba(32,239,73,.14);
+}
+.floating-whatsapp-icon{
+  width:50px;
+  height:50px;
+  flex-basis:50px;
+  box-shadow:0 0 0 4px rgba(32,239,73,.07),0 0 18px rgba(32,239,73,.18);
+}
+.floating-whatsapp-icon svg{width:25px;height:25px}
+.floating-whatsapp-text{gap:4px}
+.floating-whatsapp-text small{
+  font-size:6.5px;
+  letter-spacing:.18em;
+  color:#7e8a81;
+}
+.floating-whatsapp-text strong{
+  font-size:10px;
+  letter-spacing:.095em;
+}
+.floating-whatsapp-arrow{
+  width:9px;
+  height:9px;
+  margin-left:10px;
+}
+@media(max-width:600px){
+  .floating-whatsapp{
+    right:15px;
+    bottom:16px;
+    width:58px;
+    height:58px;
+    min-width:58px;
+    padding:0;
+    border-radius:50%;
+  }
+  .floating-whatsapp:before{inset:-4px;border-radius:50%}
+  .floating-whatsapp-icon{
+    width:44px;
+    height:44px;
+    flex-basis:44px;
+  }
+}
