@@ -1,11 +1,13 @@
-# Ajustes técnicos de SEO — outubro de 2026
+# Revisão técnica de SEO — outubro de 2026
 
-Esta versão mantém o layout, os textos principais, as imagens e a logo oficial da LUMEM. Foram acrescentados:
+Esta versão mantém o visual, os textos principais, as imagens e a logo oficial da LUMEM, com ajustes na identificação geográfica e nos metadados.
 
-- URL canônica da página inicial.
-- Metadados Open Graph e Twitter para compartilhamento.
-- Dados estruturados `ProfessionalService` com nome, site, telefone, e-mail, áreas de atendimento e serviços. Nenhum endereço físico foi inventado.
-- `robots.txt` permitindo rastreamento e apontando para o sitemap.
-- `sitemap.xml` com a página inicial.
+- Título SEO identifica a LUMEM e Cachoeirinha, RS.
+- Meta description reforça os serviços e a área de atendimento.
+- Canonical e metadados de compartilhamento mantidos e alinhados.
+- Dados estruturados `ProfessionalService` identificam a empresa, contatos, serviços e áreas de atendimento, sem inventar endereço físico.
+- `robots.txt` permite rastreamento e aponta para o sitemap.
+- `sitemap.xml` lista a página inicial.
+- A página inicial destaca atendimento presencial em Cachoeirinha – RS e na Região Metropolitana de Porto Alegre, além de suporte remoto no Brasil e no exterior.
 
-Após publicar, confira `https://lumemti.com.br/robots.txt` e `https://lumemti.com.br/sitemap.xml`, e envie o sitemap pelo Google Search Console. Dados estruturados ajudam o Google a compreender o negócio, mas não garantem uma posição específica nos resultados.
+Após publicar, confira `https://lumemti.com.br/robots.txt` e `https://lumemti.com.br/sitemap.xml`, e envie o sitemap pelo Google Search Console. Dados estruturados e metadados ajudam o Google a compreender o negócio, mas não garantem posições específicas nem impedem correções automáticas na grafia da marca.
