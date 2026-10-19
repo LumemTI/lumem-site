@@ -851,3 +851,192 @@ html { scroll-padding-top: 82px; }
 }
 @media(hover:none){.feature-photo:hover img{transform:scale(1.005);filter:none}.feature-photo:hover:before{border-color:rgba(37,217,120,0);box-shadow:none}}
 @media(prefers-reduced-motion:reduce){.feature-photo img,.feature-photo:before,.feature-photo:after,.feature-copy .inline-link,.feature-copy .inline-link .arrow-icon{transition:none!important}.feature-photo:hover img{transform:none}}
+
+
+/* LUMEM Responsive Polish — mobile and tablet only.
+   Desktop layout intentionally remains unchanged. */
+@media (min-width: 761px) and (max-width: 1050px) {
+  .section-wrap { width: min(var(--max), 92%); }
+  .section-heading { grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); gap: 5%; }
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .service-grid .service-card,
+  .service-grid .service-card:first-child,
+  .service-grid .service-card:last-child,
+  .service-grid .service-card:nth-child(3),
+  .service-grid .service-card:nth-child(4),
+  .service-grid .service-card:nth-child(5) {
+    min-height: 218px;
+    margin: 0;
+    padding: 24px 22px;
+    border: 0;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+  }
+  .service-grid .service-card:nth-child(even) { border-right: 0; }
+  .service-grid .service-card:nth-child(5) {
+    grid-column: 1 / -1;
+    min-height: 172px;
+    border-bottom: 0;
+  }
+  .service-card .service-icon { margin: 12px 0 14px; }
+  .service-card h3 { font-size: 16px; }
+  .service-card p { font-size: 13px; line-height: 1.65; margin-bottom: 16px; }
+  .feature { gap: 5%; padding-top: 62px; padding-bottom: 88px; }
+  .feature-photo { height: clamp(310px, 38vw, 390px); }
+  .about { gap: 5%; padding-top: 68px; padding-bottom: 88px; }
+  .about-photo { height: clamp(380px, 48vw, 500px); }
+  .contact { gap: 7%; padding-top: 80px; padding-bottom: 80px; }
+}
+
+@media (max-width: 760px) {
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  .section-wrap,
+  .hero-content { width: calc(100% - 36px); }
+  .header { height: 72px; padding-inline: 18px; }
+  .brand { width: clamp(132px, 39vw, 158px); }
+  .menu-toggle { min-width: 44px; min-height: 44px; display: grid; place-items: center; }
+  .hero { min-height: 0; }
+  .hero-content { padding: 72px 0 78px; }
+  .hero h1 { font-size: clamp(36px, 8.8vw, 54px); line-height: 1.04; letter-spacing: -.055em; }
+  .hero-lead { font-size: 15px; line-height: 1.75; max-width: 38ch; }
+  .eyebrow { font-size: 10px; letter-spacing: .14em; margin-bottom: 16px; }
+  .services { padding-top: 58px; padding-bottom: 58px; }
+  .section-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-bottom: 24px; }
+  .section-heading h2 { font-size: clamp(30px, 7.5vw, 42px); line-height: 1.08; letter-spacing: -.045em; }
+  .section-heading > p { font-size: 14px; line-height: 1.75; margin: 0; }
+
+  /* Compact, single-column service cards on phones: no oversized empty space. */
+  .service-grid {
+    grid-template-columns: minmax(0, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    overflow: hidden;
+  }
+  .service-grid .service-card,
+  .service-grid .service-card:first-child,
+  .service-grid .service-card:last-child,
+  .service-grid .service-card:nth-child(3),
+  .service-grid .service-card:nth-child(4),
+  .service-grid .service-card:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 20px 19px 19px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+    transform: none;
+  }
+  .service-grid .service-card:last-child { border-bottom: 0; }
+  .service-card .service-icon,
+  .service-grid .service-card:nth-child(5) .service-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service-card .service-icon svg { width: 25px; height: 25px; }
+  .service-card h3,
+  .service-grid .service-card:nth-child(5) h3 {
+    margin: 0 0 7px;
+    font-size: 16px;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
+  .service-card p,
+  .service-grid .service-card:nth-child(5) p {
+    margin: 0 0 12px;
+    max-width: 42ch;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .service-card .card-link,
+  .service-grid .service-card:nth-child(5) .card-link {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .service-grid .service-card:hover,
+  .service-grid .service-card:focus-visible { background: rgba(37,217,120,.035); }
+  .service-grid .service-card:hover { transform: none; }
+
+  .about { grid-template-columns: minmax(0, 1fr); gap: 25px; padding-top: 52px; padding-bottom: 64px; }
+  .about-photo { height: clamp(270px, 76vw, 370px); border-radius: 13px; }
+  .photo-stamp { left: 15px; bottom: 15px; max-width: calc(100% - 30px); }
+  .about-copy h2 { font-size: clamp(31px, 7.8vw, 43px); line-height: 1.08; margin-bottom: 17px; }
+  .about-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.75; margin-bottom: 14px; }
+  .trust-points { gap: 8px; margin-top: 21px; }
+  .trust-points > div { padding: 13px 13px; gap: 11px; border-radius: 11px; }
+  .trust-points b { font-size: 13px; }
+  .trust-points small { font-size: 12px; line-height: 1.55; }
+
+  .feature { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-top: 48px; padding-bottom: 62px; }
+  .feature-copy { grid-column: 1; grid-row: 1; padding: 0; max-width: none; }
+  .feature-copy .eyebrow { margin-bottom: 14px; }
+  .feature-copy h2 { font-size: clamp(32px, 8vw, 44px); line-height: 1.06; letter-spacing: -.05em; margin-bottom: 16px; }
+  .feature-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.75; margin-bottom: 18px; max-width: 54ch; }
+  .feature-copy .inline-link { min-height: 44px; align-items: center; gap: 12px; }
+  .feature-photo { grid-column: 1; grid-row: 2; width: 100%; height: clamp(230px, 67vw, 340px); border-radius: 13px; }
+  .feature-photo img { transform: none; }
+  .image-label { left: 14px; bottom: 14px; max-width: calc(100% - 28px); font-size: 9px; line-height: 1.5; }
+
+  .contact { grid-template-columns: minmax(0, 1fr); gap: 25px; padding-top: 58px; padding-bottom: 62px; }
+  .contact-title h2 { font-size: clamp(32px, 8vw, 44px); line-height: 1.07; }
+  .contact-card { min-width: 0; padding: 18px; border-radius: 13px; }
+  .contact-whatsapp { gap: 11px; padding: 14px 12px; border-radius: 2px; min-width: 0; }
+  .contact-whatsapp-copy { min-width: 0; }
+  .contact-whatsapp b { font-size: 13px; line-height: 1.4; }
+  .contact-whatsapp small { font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+  .email-link { overflow-wrap: anywhere; }
+  .contact-reach p { font-size: 12px; }
+  .footer { padding-bottom: max(28px, env(safe-area-inset-bottom)); }
+  .floating-whatsapp { right: max(16px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
+  .back-top { right: 18px; bottom: 90px; }
+}
+
+@media (max-width: 420px) {
+  .section-wrap,
+  .hero-content { width: calc(100% - 32px); }
+  .header { padding-inline: 16px; }
+  .brand { width: 138px; }
+  .hero-content { padding-top: 60px; padding-bottom: 66px; }
+  .hero h1 { font-size: clamp(34px, 9vw, 39px); }
+  .services { padding-top: 48px; padding-bottom: 50px; }
+  .service-grid .service-card,
+  .service-grid .service-card:first-child,
+  .service-grid .service-card:last-child,
+  .service-grid .service-card:nth-child(3),
+  .service-grid .service-card:nth-child(4),
+  .service-grid .service-card:nth-child(5) { padding: 18px 16px; }
+  .service-card h3,
+  .service-grid .service-card:nth-child(5) h3 { font-size: 15px; }
+  .service-card p,
+  .service-grid .service-card:nth-child(5) p { font-size: 13px; }
+  .about { padding-top: 44px; padding-bottom: 52px; }
+  .feature { padding-top: 42px; padding-bottom: 52px; }
+  .contact-card { padding: 15px; }
+  .floating-whatsapp { transform: scale(.92); transform-origin: bottom right; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-grid .service-card,
+  .feature-photo img,
+  .about-photo img,
+  .trust-points > div { transition: none !important; }
+}
